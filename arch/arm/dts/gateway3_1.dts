@@ -61,7 +61,7 @@
 			mmc1: mmc@f8000000 {
 				pinctrl-names = "default";
 				pinctrl-0 = <&pinctrl_mmc1_clk_cmd_dat0 &pinctrl_mmc1_dat1_3 &pinctrl_mmc1_cd>;
-				status = "okay";
+				status = "disabled";
 				slot@0 {
 					reg = <0>;
 					bus-width = <4>;
@@ -72,7 +72,6 @@
 			macb1: ethernet@f802c000 {
 				phy-mode = "rmii";
 				status = "okay";
-
 				#address-cells = <1>;
 				#size-cells = <0>;
 				phy0: ethernet-phy@1 {
@@ -136,7 +135,7 @@
 					 &pioD 28 0
 					 0
 					>;
-			status = "okay";
+			status = "disabled";
 		};
 
 		usb2: ehci@00700000 {
